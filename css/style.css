@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: var(--fonte);
+    
+}
+:root {
+    --cor-bg-bd: #000;
+    --cor-section: #555555;
+    --cor-principal: #f6f6f6;
+    --cor-respostas: rgb(165, 45, 65);
+    --cor-perguntas: aqua;
+    --cor-botao-sim-hover: rgb(37, 190, 190);
+    --cor-botao-nao-hover: rgb(124, 50, 63);
+    --fonte:'Pangolin', cursive;
+    
+}
+.titulo__jogo{
+    color: var(--cor-principal);
+}
+.pagina {
+    background-color: var(--cor-bg-bd);
+}
+.jogo {
+    background-color: var(--cor-section);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+.perguntas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--cor-perguntas);
+    width: 50%;
+    height: 8em;
+
+}
+.respostas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--cor-respostas);
+    width: 50%;
+    height: 8em;
+}
+.botao__sim {
+    background-color: var(--cor-perguntas);
+    color: var(--cor-bg-bd);
+    border: 1px solid var(--cor-perguntas);
+    border-radius: 10px;
+    padding: 1em;
+    cursor:pointer;
+}
+.botao__nao {
+    background-color: var(--cor-respostas);
+    color: var(--cor-bg-bd);
+    border: 1px solid var(--cor-respostas);
+    border-radius: 10px;
+    padding: 1em;
+    cursor:not-allowed;
+}
+
+button:hover {
+    box-shadow: 5px -5px #000;
+}
+
+.botao__sim:hover {
+    background-color: var(--cor-botao-sim-hover);
+}
+.botao__nao:hover {
+    background-color: var(--cor-botao-nao-hover);
+}
+
+.especializacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.especializacao__botoes {
+    display: flex;
+    justify-content: space-around;
+}
