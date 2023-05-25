@@ -10,6 +10,7 @@ let respostaNum2;
 let respostaNum3;
 let respostaNum4;
 
+
 apresentacao();
 
 
@@ -27,7 +28,7 @@ function apresentacao(){
 }
 function perguntas() {
     respostaNum1 = prompt(perguntaNum1)
-    if (respostaNum1 == 'frontend') {
+    if (respostaNum1 == 'frontend' || 'front') {
         perguntasFront();
     } else {
         perguntasBack();
@@ -56,7 +57,18 @@ function anotarRespostas () {
     //anotar respostas
     document.getElementById('resposta1'). innerHTML = respostaNum1;
     document.getElementById('resposta2'). innerHTML = respostaNum2;
-    
+        
+    let tecnologiasNovas;
+    let especializacaoItens = document.getElementById('span__especializacao__itens');
+
     alert('Além das tecnologias que você deseja estudar, é sempre bom estudar outras tecnologias caso queira se tornar um fullstack.')
-    prompt('Digite quais tecnologias deseja estudar.')
+    tecnologiasNovas = prompt('Digite quais tecnologias deseja estudar.')
+
+    if (tecnologiasNovas == 'python' || 'py') {
+        especializacaoItens. innerHTML = 'Para estudar <span class="backend">python</span> clique <a href="https://cursos.alura.com.br/formacao-Python-linguagem">aqui</a>';
+    } else if (tecnologiasNovas == 'php' || 'PHP') {
+        especializacaoItens. innerHTML = 'Para estudar <span class="backend">php</span> clique <a href="https://cursos.alura.com.br/formacao-linguagem-php">aqui</a>'
+    } else if (tecnologiasNovas == 'nodejs' || 'NodeJS') {
+        especializacaoItens. innerHTML = 'Para estudar <span class="backend">NodeJS</span> clique <a href="https://cursos.alura.com.br/formacao-node-js-express">aqui</a>'
+    }
 }

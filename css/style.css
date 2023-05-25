@@ -92,3 +92,18 @@ button:hover {
     display: flex;
     justify-content: space-around;
 }
+
+.span__especializacao__itens {
+    color:var(--cor-principal);
+}
+
+.backend {
+    text-transform: uppercase;
+    color: var(--cor-principal);
+}
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--cor-perguntas);
+}
