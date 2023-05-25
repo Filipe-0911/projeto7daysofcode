@@ -28,7 +28,7 @@ function apresentacao(){
 }
 function perguntas() {
     respostaNum1 = prompt(perguntaNum1)
-    if (respostaNum1 == 'frontend' || 'front') {
+    if (respostaNum1 == 'frontend' || respostaNum1 == 'front') {
         perguntasFront();
     } else {
         perguntasBack();
@@ -39,13 +39,13 @@ function perguntas() {
 function perguntasFront () {
     perguntaNum2 = 'Você quer aprender React ou Vue?'
     respostaNum2 = prompt(perguntaNum2);
-    anotarRespostas();
+    anotarRespostas ();
 }
 
 function perguntasBack() {
     perguntaNum2 = 'Você quer aprender C# ou Java?'
     respostaNum2 = prompt(perguntaNum2);
-    anotarRespostas();
+    anotarRespostas ();
     
 }
 
@@ -58,17 +58,23 @@ function anotarRespostas () {
     document.getElementById('resposta1'). innerHTML = respostaNum1;
     document.getElementById('resposta2'). innerHTML = respostaNum2;
         
+}
+
+const especializacaoBack = () => {
     let tecnologiasNovas;
+    let learnPython = 'Para estudar <span class="backend">python</span> clique <a href="https://cursos.alura.com.br/formacao-Python-linguagem">aqui</a>';
+    let learnPHP = 'Para estudar <span class="backend">php</span> clique <a href="https://cursos.alura.com.br/formacao-linguagem-php">aqui</a>';
+    let learnNodejs = 'Para estudar <span class="backend">NodeJS</span> clique <a href="https://cursos.alura.com.br/formacao-node-js-express">aqui</a>';
     let especializacaoItens = document.getElementById('span__especializacao__itens');
 
     alert('Além das tecnologias que você deseja estudar, é sempre bom estudar outras tecnologias caso queira se tornar um fullstack.')
     tecnologiasNovas = prompt('Digite quais tecnologias deseja estudar.')
 
-    if (tecnologiasNovas == 'python' || 'py') {
-        especializacaoItens. innerHTML = 'Para estudar <span class="backend">python</span> clique <a href="https://cursos.alura.com.br/formacao-Python-linguagem">aqui</a>';
-    } else if (tecnologiasNovas == 'php' || 'PHP') {
-        especializacaoItens. innerHTML = 'Para estudar <span class="backend">php</span> clique <a href="https://cursos.alura.com.br/formacao-linguagem-php">aqui</a>'
-    } else if (tecnologiasNovas == 'nodejs' || 'NodeJS') {
-        especializacaoItens. innerHTML = 'Para estudar <span class="backend">NodeJS</span> clique <a href="https://cursos.alura.com.br/formacao-node-js-express">aqui</a>'
+    if (tecnologiasNovas == 'python' || tecnologiasNovas == 'py') {
+        especializacaoItens.innerHTML = learnPython
+    } else if (tecnologiasNovas == 'php' || tecnologiasNovas == 'PHP') {
+        especializacaoItens.innerHTML = learnPHP
+    } else if (tecnologiasNovas == 'nodejs' || tecnologiasNovas == 'NodeJS') {
+        especializacaoItens.innerHTML = learnNodejs
     }
 }
