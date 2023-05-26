@@ -125,3 +125,24 @@ a {
     cursor: pointer;
     color: var(--cor-perguntas);
 }
+
+
+@media (max-width:415px){
+    * {
+        font-size: 1em !important;
+        
+        
+    }
+    .conteudo {
+        padding: 10px;
+    }
+
+    .botao__sim, .botao__nao {
+        padding: 0.5em;
+    }
+    .especializacao__botoes {
+        justify-content:space-between ;
+        gap: 5em;
+        margin: 2em;
+    }
+}

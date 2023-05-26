@@ -1,6 +1,8 @@
 const nomeEntrevistado = prompt("Seja bem-vindo ao jogo de Perguntas sobre sua carreira. Digite seu Nome.");
 // perguntas
 const perguntaNum1 = 'Você deseja ser frontend ou backend?';
+const botao = document.querySelector('#js-apresentacao');
+const botaoEspecializacao = document.querySelector('#botao__sim');
 let perguntaNum2;
 let perguntaNum3;
 let perguntaNum4;
@@ -15,11 +17,9 @@ let tecnologiasBackLearn = ['Para estudar <span class="backend">python</span> cl
     'Para estudar <span class="backend">php</span> clique <a href="https://cursos.alura.com.br/formacao-linguagem-php">aqui</a>',
     'Para estudar <span class="backend">NodeJS</span> clique <a href="https://cursos.alura.com.br/formacao-node-js-express">aqui</a>'];
 
-const botao = document.querySelector('#js-apresentacao');
 
-botao.addEventListener("click", (evento) => {
-    console.log('clicou');
-    console.log(evento);
+
+botao.addEventListener("click", () => {
     apresentacao();
 })
 
@@ -27,17 +27,14 @@ const chamadaParaJogo = () => {
     document.getElementById('apresentacao__jogo').innerHTML = `Olá, ${nomeEntrevistado}. Meu nome é JavaScript. Para iniciar o Jogo clique no botão abaixo.`
 }
 
-
-
 const especializacaoBack = () => {
     let tecnologiasNovas;
     let especializacaoItens = document.getElementById('span__especializacao__itens');
-
     alert('Além das tecnologias que você deseja estudar, é sempre bom estudar outras tecnologias caso queira se tornar um fullstack.')
     tecnologiasNovas = prompt(`Escolha uma das linguagens abaixo:
    python; 
    PHP; 
-   NodeJS`)
+   NodeJS`);
 
     for (let i = 0; i < 3; i++) {
         if (tecnologiasNovas == tecnologiasBack[i]) {
@@ -55,9 +52,7 @@ const especializacaoBack = () => {
     }
 }
 
-document.querySelector('#botao__sim').addEventListener("click", (evento) => {
-    console.log('clicou')
-    console.log(evento);
+botaoEspecializacao.addEventListener("click", () => {
     especializacaoBack()
 })
 
