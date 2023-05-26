@@ -15,9 +15,19 @@ let tecnologiasBackLearn = ['Para estudar <span class="backend">python</span> cl
     'Para estudar <span class="backend">php</span> clique <a href="https://cursos.alura.com.br/formacao-linguagem-php">aqui</a>',
     'Para estudar <span class="backend">NodeJS</span> clique <a href="https://cursos.alura.com.br/formacao-node-js-express">aqui</a>'];
 
+const botao = document.querySelector('#js-apresentacao');
+
+botao.addEventListener("click", (evento) => {
+    console.log('clicou');
+    console.log(evento);
+    apresentacao();
+})
+
 const chamadaParaJogo = () => {
     document.getElementById('apresentacao__jogo').innerHTML = `Olá, ${nomeEntrevistado}. Meu nome é JavaScript. Para iniciar o Jogo clique no botão abaixo.`
 }
+
+
 
 const especializacaoBack = () => {
     let tecnologiasNovas;
@@ -45,7 +55,11 @@ const especializacaoBack = () => {
     }
 }
 
-
+document.querySelector('#botao__sim').addEventListener("click", (evento) => {
+    console.log('clicou')
+    console.log(evento);
+    especializacaoBack()
+})
 
 chamadaParaJogo();
 
@@ -66,7 +80,7 @@ function apresentacao() {
 
 function perguntas() {
     respostaNum1 = prompt(perguntaNum1)
-    if (respostaNum1 == 'frontend' || respostaNum1 == 'front') {
+    if (respostaNum1 == 'frontend' || respostaNum1 == 'front' || respostaNum1 == 'Frontend') {
         perguntasFront();
     } else {
         perguntasBack();
