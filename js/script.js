@@ -13,9 +13,9 @@ let respostaNum3;
 let respostaNum4;
 //arrays da especializacao
 let tecnologiasBack = [`python`, `PHP`, `NodeJS`];
-let tecnologiasBackLearn = ['Para estudar <span class="backend">python</span> clique <a href="https://cursos.alura.com.br/formacao-Python-linguagem">aqui</a>',
-    'Para estudar <span class="backend">php</span> clique <a href="https://cursos.alura.com.br/formacao-linguagem-php">aqui</a>',
-    'Para estudar <span class="backend">NodeJS</span> clique <a href="https://cursos.alura.com.br/formacao-node-js-express">aqui</a>'];
+let tecnologiasBackLearn = ['Para estudar <span class="backend">python</span> clique <a href="https://cursos.alura.com.br/formacao-Python-linguagem" target="_blank">aqui</a>',
+    'Para estudar <span class="backend">php</span> clique <a href="https://cursos.alura.com.br/formacao-linguagem-php" target="_blank">aqui</a>',
+    'Para estudar <span class="backend">NodeJS</span> clique <a href="https://cursos.alura.com.br/formacao-node-js-express" target="_blank">aqui</a>'];
 
 
 
