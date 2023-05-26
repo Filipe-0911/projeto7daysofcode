@@ -39,7 +39,6 @@ function perguntas() {
     } else {
         perguntasBack();
     }
-
 }
 
 function perguntasFront () {
@@ -62,8 +61,7 @@ function anotarRespostas () {
 
     //anotar respostas
     document.getElementById('resposta1'). innerHTML = respostaNum1;
-    document.getElementById('resposta2'). innerHTML = respostaNum2;
-        
+    document.getElementById('resposta2'). innerHTML = respostaNum2;       
 }
 
 const especializacaoBack = () => {
