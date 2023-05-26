@@ -10,7 +10,7 @@ let respostaNum2;
 let respostaNum3;
 let respostaNum4;
 
-let tecnologias = [`python`, `php`, `nodejs`]
+let tecnologias = [`Python`, `PHP`, `NodeJS`]
 
 
 let tecnologiasLearn = ['Para estudar <span class="backend">python</span> clique <a href="https://cursos.alura.com.br/formacao-Python-linguagem">aqui</a>', 
@@ -18,7 +18,6 @@ let tecnologiasLearn = ['Para estudar <span class="backend">python</span> clique
                         'Para estudar <span class="backend">NodeJS</span> clique <a href="https://cursos.alura.com.br/formacao-node-js-express">aqui</a>']
 
 
-apresentacao();
 
 function apresentacao(){
     alert('Olá ' + nomeEntrevistado + ', meu nome é JavaScript.')
@@ -69,7 +68,10 @@ const especializacaoBack = () => {
     let especializacaoItens = document.getElementById('span__especializacao__itens');
 
     alert('Além das tecnologias que você deseja estudar, é sempre bom estudar outras tecnologias caso queira se tornar um fullstack.')
-    tecnologiasNovas = prompt('Digite quais tecnologias deseja estudar.')
+    tecnologiasNovas = prompt(`Escolha uma das linguagens abaixo:
+   python; 
+   PHP; 
+   NodeJS`)
 
     for (let i = 0; i < 3; i++){
         if (tecnologiasNovas == tecnologias[i]) {

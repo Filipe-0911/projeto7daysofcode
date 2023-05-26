@@ -26,9 +26,10 @@
 .jogo {
     background-color: var(--cor-section);
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     font-size: 1.5em;
+    
 }
 .conteudo {
     display: flex;
