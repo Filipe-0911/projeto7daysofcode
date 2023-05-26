@@ -22,6 +22,7 @@
 }
 .pagina {
     background-color: var(--cor-bg-bd);
+    
 }
 .jogo {
     background-color: var(--cor-section);
@@ -30,6 +31,14 @@
     justify-content: center;
     font-size: 1.5em;
     
+}
+
+.iniciar__jogo {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
 }
 .conteudo {
     display: flex;
@@ -46,6 +55,10 @@
     width: 50%;
     height: 8em;
 
+}
+
+.apresentacao__jogo{
+    margin-top: 2em ;
 }
 .respostas {
     display: flex;

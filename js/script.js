@@ -9,18 +9,20 @@ let respostaNum1;
 let respostaNum2;
 let respostaNum3;
 let respostaNum4;
-
-let tecnologias = [`Python`, `PHP`, `NodeJS`]
-
-
+//arrays da especializacao
+let tecnologias = [`python`, `PHP`, `NodeJS`]
 let tecnologiasLearn = ['Para estudar <span class="backend">python</span> clique <a href="https://cursos.alura.com.br/formacao-Python-linguagem">aqui</a>', 
                         'Para estudar <span class="backend">php</span> clique <a href="https://cursos.alura.com.br/formacao-linguagem-php">aqui</a>',
                         'Para estudar <span class="backend">NodeJS</span> clique <a href="https://cursos.alura.com.br/formacao-node-js-express">aqui</a>']
 
+const chamadaParaJogo = () => {
+    document.getElementById('apresentacao__jogo').innerHTML = `Olá, ${nomeEntrevistado}. Meu nome é JavaScript. Para iniciar o Jogo clique no botão abaixo.`
+}
 
+
+chamadaParaJogo();
 
 function apresentacao(){
-    alert('Olá ' + nomeEntrevistado + ', meu nome é JavaScript.')
     alert('Neste jogo, farei perguntas a respeito de carreiras na área de tecnologia.')
     let iniciar = prompt ('Podemos começar?')
 
