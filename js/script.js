@@ -10,10 +10,10 @@ let respostaNum2;
 let respostaNum3;
 let respostaNum4;
 //arrays da especializacao
-let tecnologias = [`python`, `PHP`, `NodeJS`]
-let tecnologiasLearn = ['Para estudar <span class="backend">python</span> clique <a href="https://cursos.alura.com.br/formacao-Python-linguagem">aqui</a>', 
-                        'Para estudar <span class="backend">php</span> clique <a href="https://cursos.alura.com.br/formacao-linguagem-php">aqui</a>',
-                        'Para estudar <span class="backend">NodeJS</span> clique <a href="https://cursos.alura.com.br/formacao-node-js-express">aqui</a>']
+let tecnologiasBack = [`python`, `PHP`, `NodeJS`]
+let tecnologiasBackLearn = ['Para estudar <span class="backend">python</span> clique <a href="https://cursos.alura.com.br/formacao-Python-linguagem">aqui</a>',
+    'Para estudar <span class="backend">php</span> clique <a href="https://cursos.alura.com.br/formacao-linguagem-php">aqui</a>',
+    'Para estudar <span class="backend">NodeJS</span> clique <a href="https://cursos.alura.com.br/formacao-node-js-express">aqui</a>']
 
 const chamadaParaJogo = () => {
     document.getElementById('apresentacao__jogo').innerHTML = `Olá, ${nomeEntrevistado}. Meu nome é JavaScript. Para iniciar o Jogo clique no botão abaixo.`
@@ -33,6 +33,7 @@ function apresentacao(){
         apresentacao();
     }
 }
+
 function perguntas() {
     respostaNum1 = prompt(perguntaNum1)
     if (respostaNum1 == 'frontend' || respostaNum1 == 'front') {
@@ -42,27 +43,27 @@ function perguntas() {
     }
 }
 
-function perguntasFront () {
+function perguntasFront() {
     perguntaNum2 = 'Você quer aprender React ou Vue?'
     respostaNum2 = prompt(perguntaNum2);
-    anotarRespostas ();
+    anotarRespostas();
 }
 
 function perguntasBack() {
     perguntaNum2 = 'Você quer aprender C# ou Java?'
     respostaNum2 = prompt(perguntaNum2);
-    anotarRespostas ();
-    
+    anotarRespostas();
+
 }
 
-function anotarRespostas () {
+function anotarRespostas() {
     //anotar perguntas
-    document.getElementById('pergunta1'). innerHTML = perguntaNum1;  
-    document.getElementById('pergunta2'). innerHTML = perguntaNum2;
+    document.getElementById('pergunta1').innerHTML = perguntaNum1;
+    document.getElementById('pergunta2').innerHTML = perguntaNum2;
 
     //anotar respostas
-    document.getElementById('resposta1'). innerHTML = respostaNum1;
-    document.getElementById('resposta2'). innerHTML = respostaNum2;       
+    document.getElementById('resposta1').innerHTML = respostaNum1;
+    document.getElementById('resposta2').innerHTML = respostaNum2;
 }
 
 const especializacaoBack = () => {
@@ -75,9 +76,19 @@ const especializacaoBack = () => {
    PHP; 
    NodeJS`)
 
-    for (let i = 0; i < 3; i++){
-        if (tecnologiasNovas == tecnologias[i]) {
-            especializacaoItens.innerHTML = tecnologiasLearn[i]
+    for (let i = 0; i < 3; i++) {
+        if (tecnologiasNovas == tecnologiasBack[i]) {
+            especializacaoItens.innerHTML = tecnologiasBackLearn[i]
         }
     }
+
+    switch (tecnologiasNovas) {
+        case 'PHP': console.log('php');
+            break;
+        case 'python': console.log('python');
+            break;
+        case 'NodeJS': console.log('NodeJS');
+            break;
+    }
 }
+
