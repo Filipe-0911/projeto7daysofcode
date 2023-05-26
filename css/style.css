@@ -129,7 +129,7 @@ a {
 
 @media (max-width:415px){
     .jogo {
-        font-size: 1em !important;
+        font-size: 1.3em !important;
     }
     .conteudo {
         padding: 10px;
