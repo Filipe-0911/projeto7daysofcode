@@ -13,9 +13,9 @@ let respostaNum3;
 let respostaNum4;
 //arrays da especializacao
 let tecnologiasBack = [`python`, `PHP`, `NodeJS`];
-let tecnologiasBackLearn = ['Para estudar <span class="backend">python</span> clique <a href="https://cursos.alura.com.br/formacao-Python-linguagem" target="_blank">aqui</a>',
-    'Para estudar <span class="backend">php</span> clique <a href="https://cursos.alura.com.br/formacao-linguagem-php" target="_blank">aqui</a>',
-    'Para estudar <span class="backend">NodeJS</span> clique <a href="https://cursos.alura.com.br/formacao-node-js-express" target="_blank">aqui</a>'];
+let tecnologiasBackLearn = [`Para estudar <span class="backend">python</span> clique <a href="https://cursos.alura.com.br/formacao-Python-linguagem" target="_blank">aqui</a>`,
+    `Para estudar <span class="backend">php</span> clique <a href="https://cursos.alura.com.br/formacao-linguagem-php" target="_blank">aqui</a>`,
+    `Para estudar <span class="backend">NodeJS</span> clique <a href="https://cursos.alura.com.br/formacao-node-js-express" target="_blank">aqui</a>`];
 
 
 
@@ -28,8 +28,10 @@ const chamadaParaJogo = () => {
 }
 
 const especializacaoBack = () => {
+
     let tecnologiasNovas;
     let especializacaoItens = document.getElementById('span__especializacao__itens');
+
     alert('Além das tecnologias que você deseja estudar, é sempre bom estudar outras tecnologias caso queira se tornar um fullstack.')
     tecnologiasNovas = prompt(`Escolha uma das linguagens abaixo:
    python; 
@@ -42,14 +44,24 @@ const especializacaoBack = () => {
         }
     }
 
-    switch (tecnologiasNovas) {
-        case 'PHP': console.log('php');
-            break;
-        case 'python': console.log('python');
-            break;
-        case 'NodeJS': console.log('NodeJS');
-            break;
-    }
+    
+        switch (tecnologiasNovas) {
+            case 'Python': console.log('Python');
+                especializacaoItens.innerHTML = tecnologiasBackLearn[0];
+                break;
+            case 'php': console.log('php');
+                especializacaoItens.innerHTML = tecnologiasBackLearn[1];
+                break;
+            case 'nodejs': console.log('NodeJS');
+                especializacaoItens.innerHTML = tecnologiasBackLearn[2];
+                break;
+            case 'todos': console.log('todos');
+                especializacaoItens.innerHTML = tecnologiasBackLearn;
+                break;
+
+        }
+    
+   
 }
 
 botaoEspecializacao.addEventListener("click", () => {
