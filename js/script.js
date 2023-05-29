@@ -27,6 +27,9 @@ const chamadaParaJogo = () => {
     document.getElementById('apresentacao__jogo').innerHTML = `Olá, ${nomeEntrevistado}. Meu nome é JavaScript. Para iniciar o Jogo clique no botão abaixo.`
 }
 
+
+chamadaParaJogo();
+
 const especializacaoBack = () => {
 
     let tecnologiasNovas;
@@ -34,9 +37,9 @@ const especializacaoBack = () => {
 
     alert('Além das tecnologias que você deseja estudar, é sempre bom estudar outras tecnologias caso queira se tornar um fullstack.')
     tecnologiasNovas = prompt(`Escolha uma das linguagens abaixo:
-   python; 
-   PHP; 
-   NodeJS`);
+    python; 
+    PHP; 
+    NodeJS`);
 
     for (let i = 0; i < 3; i++) {
         if (tecnologiasNovas == tecnologiasBack[i]) {
@@ -68,7 +71,7 @@ botaoEspecializacao.addEventListener("click", () => {
     especializacaoBack()
 })
 
-chamadaParaJogo();
+
 
 function apresentacao() {
     alert('Neste jogo, farei perguntas a respeito de carreiras na área de tecnologia.');
